@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<launch>
+
+    <arg name="vocabularty_path" default="$(find ORB_SLAM2)/../../../Vocabulary/ORBvoc.txt" />
+    <arg name="camera_setting_path" default="$(find ORB_SLAM2)/conf/BJT_cam1.yaml" />
+    <arg name="bUseViewer" default="true" />
+    <arg name="bEnablePublishROSTopic" default="true" />
+
+    <node name="ORB_SLAM2" pkg="ORB_SLAM2" type="Mono" output="screen" 
+    	args="$(arg vocabularty_path) $(arg camera_setting_path) $(arg bUseViewer) $(arg bEnablePublishROSTopic)">
+  	</node>
+
+</launch>
