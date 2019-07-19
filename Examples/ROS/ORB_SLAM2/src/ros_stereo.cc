@@ -86,7 +86,7 @@ int main(int argc, char **argv)
 
     //stringstream ss(argv[3]);
     //ss >> boolalpha >> igb.do_rectify;
-    igb.do_rectify =false; //shinan:set to false to not rectify
+    igb.do_rectify =true; //shinan:set to false to not rectify
     if(igb.do_rectify)
     {      
         // Load settings related to stereo calibration
@@ -138,7 +138,7 @@ int main(int argc, char **argv)
     while(ros::ok()){
         //std::cout<< "-------------ROS IS READY--------------"<<std::endl;
         cv::VideoCapture cap1(1);
-        cv::VideoCapture cap2(2);
+        cv::VideoCapture cap2(0);
         cv::Mat src1_img,src2_img;
         double tframe = 20;
         int frame_id =0;
